@@ -9,122 +9,78 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0f0f0f;
+    background: #0d0d0d;
     color: white;
     text-align: center;
 }
 
-.container {
-    padding: 20px;
-}
-
+/* Title */
 h1 {
-    font-size: 24px;
     margin-top: 40px;
-}
-
-.box {
-    margin-top: 30px;
-}
-
-button {
-    display: block;
-    width: 80%;
-    max-width: 300px;
-    margin: 10px auto;
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #ff0080, #8000ff);
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.9;
-}
-
-.hidden {
-    display: none;
-}
-
-#loading {
-    margin-top: 50px;
-}
-
-.loader {
-    border: 5px solid #333;
-    border-top: 5px solid #ff0080;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: 20px auto;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    100% { transform: rotate(360deg); }
-}
-
-.counter {
-    margin-top: 15px;
-    color: #ff4da6;
+    font-size: 26px;
     font-weight: bold;
 }
+
+/* Main Box */
+.box {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(255, 0, 128, 0.3);
+}
+
+/* Text inside */
+.box p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #ff0080, #8000ff);
+    font-weight: bold;
+}
+
+/* Warning */
+.warning {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #aaa;
+}
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<h1>🔥 Des personnes près de vous sont en ligne maintenant</h1>
 
-    <!-- Step 1 -->
-    <div id="step1">
-        <h1>💬 Des personnes près de vous sont en ligne</h1>
-        <div class="counter">🔥 327 personnes connectées maintenant</div>
+<div class="box">
+    <p>
+        💬 Rejoignez une plateforme privée de discussion<br><br>
+        🌍 Utilisateurs actifs dans plusieurs pays<br>
+        💬 Connexion instantanée 24/7<br>
+        🔒 Expérience privée et sécurisée
+    </p>
 
-        <div class="box">
-            <p>Vous êtes :</p>
-            <button onclick="nextStep()">👨 Un homme</button>
-            <button onclick="nextStep()">👩 Une femme</button>
-        </div>
-    </div>
-
-    <!-- Step 2 -->
-    <div id="step2" class="hidden">
-        <h1>🔞 Avez-vous plus de 18 ans ?</h1>
-
-        <div class="box">
-            <button onclick="startLoading()">✅ Oui</button>
-            <button onclick="startLoading()">❌ Non</button>
-        </div>
-    </div>
-
-    <!-- Loading -->
-    <div id="loading" class="hidden">
-        <h1>🔍 Recherche de profils...</h1>
-        <div class="loader"></div>
-        <p>Connexion en cours...</p>
-    </div>
-
+    <a class="btn" href="PUT_YOUR_LINK_HERE">
+        👉 Entrer dans le chat
+    </a>
 </div>
 
-<script>
-function nextStep() {
-    document.getElementById("step1").classList.add("hidden");
-    document.getElementById("step2").classList.remove("hidden");
-}
-
-function startLoading() {
-    document.getElementById("step2").classList.add("hidden");
-    document.getElementById("loading").classList.remove("hidden");
-
-    setTimeout(function() {
-        window.location.href = "PUT_YOUR_LINK_HERE";
-    }, 2500);
-}
-</script>
+<div class="warning">
+    ⚠️ Réservé aux adultes (18+) uniquement
+</div>
 
 </body>
 </html>
